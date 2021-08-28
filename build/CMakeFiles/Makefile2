@@ -66,16 +66,19 @@ CMAKE_BINARY_DIR = "/home/suson/Projects/3D Chair/build"
 all: CMakeFiles/glad.dir/all
 all: CMakeFiles/3DChair.dir/all
 all: lib/glfw/all
+all: lib/glm/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
 preinstall: lib/glfw/preinstall
+preinstall: lib/glm/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
 clean: CMakeFiles/glad.dir/clean
 clean: CMakeFiles/3DChair.dir/clean
 clean: lib/glfw/clean
+clean: lib/glm/clean
 .PHONY : clean
 
 #=============================================================================
@@ -107,6 +110,36 @@ lib/glfw/src/preinstall:
 # Recursive "clean" directory target.
 lib/glfw/src/clean: lib/glfw/src/CMakeFiles/glfw.dir/clean
 .PHONY : lib/glfw/src/clean
+
+#=============================================================================
+# Directory level rules for directory lib/glm
+
+# Recursive "all" directory target.
+lib/glm/all: lib/glm/glm/all
+.PHONY : lib/glm/all
+
+# Recursive "preinstall" directory target.
+lib/glm/preinstall: lib/glm/glm/preinstall
+.PHONY : lib/glm/preinstall
+
+# Recursive "clean" directory target.
+lib/glm/clean: lib/glm/glm/clean
+.PHONY : lib/glm/clean
+
+#=============================================================================
+# Directory level rules for directory lib/glm/glm
+
+# Recursive "all" directory target.
+lib/glm/glm/all:
+.PHONY : lib/glm/glm/all
+
+# Recursive "preinstall" directory target.
+lib/glm/glm/preinstall:
+.PHONY : lib/glm/glm/preinstall
+
+# Recursive "clean" directory target.
+lib/glm/glm/clean:
+.PHONY : lib/glm/glm/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/glad.dir

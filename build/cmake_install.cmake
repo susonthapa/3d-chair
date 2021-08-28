@@ -45,6 +45,7 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/suson/Projects/3D Chair/build/lib/glfw/cmake_install.cmake")
+  include("/home/suson/Projects/3D Chair/build/lib/glm/cmake_install.cmake")
 
 endif()
 

@@ -17,6 +17,8 @@ set(CMAKE_MAKEFILE_DEPENDS
   "../lib/glfw/src/glfw3.pc.in"
   "../lib/glfw/src/glfw3Config.cmake.in"
   "../lib/glfw/src/glfw_config.h.in"
+  "../lib/glm/CMakeLists.txt"
+  "../lib/glm/glm/CMakeLists.txt"
   "/usr/share/cmake-3.21/Modules/BasicConfigVersion-SameMajorVersion.cmake.in"
   "/usr/share/cmake-3.21/Modules/CMakeCInformation.cmake"
   "/usr/share/cmake-3.21/Modules/CMakeCXXInformation.cmake"
@@ -67,6 +69,8 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "lib/glfw/src/glfw3.pc"
   "lib/glfw/CMakeFiles/CMakeDirectoryInformation.cmake"
   "lib/glfw/src/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "lib/glm/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "lib/glm/glm/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
