@@ -2,6 +2,11 @@
 cmake_minimum_required(VERSION 3.1)
 project(3DChair)
 
+# Copy files to build directory
+file(COPY "${CMAKE_CURRENT_SOURCE_DIR}/src/fragment_shader.glsl" DESTINATION "${CMAKE_CURRENT_BINARY_DIR}")
+file(COPY "${CMAKE_CURRENT_SOURCE_DIR}/src/vector_shader.glsl" DESTINATION "${CMAKE_CURRENT_BINARY_DIR}")
+file(COPY "${CMAKE_CURRENT_SOURCE_DIR}/src/texture.jpg" DESTINATION "${CMAKE_CURRENT_BINARY_DIR}")
+
 # Source files
 set(SRC_DIR "${CMAKE_CURRENT_SOURCE_DIR}/src")
 set(LIB_DIR "${CMAKE_CURRENT_SOURCE_DIR}/lib")
