@@ -1,0 +1,300 @@
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/suson/Projects/3D Chair/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_ffa37/fast && /usr/bin/make  -f CMakeFiles/cmTC_ffa37.dir/build.make CMakeFiles/cmTC_ffa37.dir/build
+make[1]: Entering directory '/home/suson/Projects/3D Chair/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_ffa37.dir/src.c.o
+/usr/bin/gcc -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_ffa37.dir/src.c.o -c "/home/suson/Projects/3D Chair/build/CMakeFiles/CMakeTmp/src.c"
+Linking C executable cmTC_ffa37
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ffa37.dir/link.txt --verbose=1
+/usr/bin/gcc -rdynamic CMakeFiles/cmTC_ffa37.dir/src.c.o -o cmTC_ffa37 
+/usr/bin/ld: CMakeFiles/cmTC_ffa37.dir/src.c.o: in function `main':
+src.c:(.text+0x3e): undefined reference to `pthread_create'
+/usr/bin/ld: src.c:(.text+0x4a): undefined reference to `pthread_detach'
+/usr/bin/ld: src.c:(.text+0x56): undefined reference to `pthread_cancel'
+/usr/bin/ld: src.c:(.text+0x67): undefined reference to `pthread_join'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_ffa37.dir/build.make:99: cmTC_ffa37] Error 1
+make[1]: Leaving directory '/home/suson/Projects/3D Chair/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:127: cmTC_ffa37/fast] Error 2
+
+
+Source file was:
+#include <pthread.h>
+
+static void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/suson/Projects/3D Chair/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_a89f0/fast && /usr/bin/make  -f CMakeFiles/cmTC_a89f0.dir/build.make CMakeFiles/cmTC_a89f0.dir/build
+make[1]: Entering directory '/home/suson/Projects/3D Chair/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_a89f0.dir/CheckFunctionExists.c.o
+/usr/bin/gcc   -DCHECK_FUNCTION_EXISTS=pthread_create -o CMakeFiles/cmTC_a89f0.dir/CheckFunctionExists.c.o -c /usr/share/cmake-3.21/Modules/CheckFunctionExists.c
+Linking C executable cmTC_a89f0
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a89f0.dir/link.txt --verbose=1
+/usr/bin/gcc  -DCHECK_FUNCTION_EXISTS=pthread_create -rdynamic CMakeFiles/cmTC_a89f0.dir/CheckFunctionExists.c.o -o cmTC_a89f0  -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_a89f0.dir/build.make:99: cmTC_a89f0] Error 1
+make[1]: Leaving directory '/home/suson/Projects/3D Chair/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:127: cmTC_a89f0/fast] Error 2
+
+
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/suson/Projects/3D Chair/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_ba5d9/fast && /usr/bin/make  -f CMakeFiles/cmTC_ba5d9.dir/build.make CMakeFiles/cmTC_ba5d9.dir/build
+make[1]: Entering directory '/home/suson/Projects/3D Chair/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_ba5d9.dir/src.c.o
+/usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_ba5d9.dir/src.c.o -c "/home/suson/Projects/3D Chair/build/CMakeFiles/CMakeTmp/src.c"
+Linking C executable cmTC_ba5d9
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ba5d9.dir/link.txt --verbose=1
+/usr/bin/cc -rdynamic CMakeFiles/cmTC_ba5d9.dir/src.c.o -o cmTC_ba5d9 
+/usr/bin/ld: CMakeFiles/cmTC_ba5d9.dir/src.c.o: in function `main':
+src.c:(.text+0x3e): undefined reference to `pthread_create'
+/usr/bin/ld: src.c:(.text+0x4a): undefined reference to `pthread_detach'
+/usr/bin/ld: src.c:(.text+0x56): undefined reference to `pthread_cancel'
+/usr/bin/ld: src.c:(.text+0x67): undefined reference to `pthread_join'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_ba5d9.dir/build.make:99: cmTC_ba5d9] Error 1
+make[1]: Leaving directory '/home/suson/Projects/3D Chair/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:127: cmTC_ba5d9/fast] Error 2
+
+
+Source file was:
+#include <pthread.h>
+
+static void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/suson/Projects/3D Chair/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_a932e/fast && /usr/bin/make  -f CMakeFiles/cmTC_a932e.dir/build.make CMakeFiles/cmTC_a932e.dir/build
+make[1]: Entering directory '/home/suson/Projects/3D Chair/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_a932e.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create -o CMakeFiles/cmTC_a932e.dir/CheckFunctionExists.c.o -c /usr/share/cmake-3.21/Modules/CheckFunctionExists.c
+Linking C executable cmTC_a932e
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a932e.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create -rdynamic CMakeFiles/cmTC_a932e.dir/CheckFunctionExists.c.o -o cmTC_a932e  -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_a932e.dir/build.make:99: cmTC_a932e] Error 1
+make[1]: Leaving directory '/home/suson/Projects/3D Chair/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:127: cmTC_a932e/fast] Error 2
+
+
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/suson/Projects/3D Chair/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_3507d/fast && /usr/bin/make  -f CMakeFiles/cmTC_3507d.dir/build.make CMakeFiles/cmTC_3507d.dir/build
+make[1]: Entering directory '/home/suson/Projects/3D Chair/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_3507d.dir/src.c.o
+/usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_3507d.dir/src.c.o -c "/home/suson/Projects/3D Chair/build/CMakeFiles/CMakeTmp/src.c"
+Linking C executable cmTC_3507d
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3507d.dir/link.txt --verbose=1
+/usr/bin/cc -rdynamic CMakeFiles/cmTC_3507d.dir/src.c.o -o cmTC_3507d 
+/usr/bin/ld: CMakeFiles/cmTC_3507d.dir/src.c.o: in function `main':
+src.c:(.text+0x3e): undefined reference to `pthread_create'
+/usr/bin/ld: src.c:(.text+0x4a): undefined reference to `pthread_detach'
+/usr/bin/ld: src.c:(.text+0x56): undefined reference to `pthread_cancel'
+/usr/bin/ld: src.c:(.text+0x67): undefined reference to `pthread_join'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_3507d.dir/build.make:99: cmTC_3507d] Error 1
+make[1]: Leaving directory '/home/suson/Projects/3D Chair/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:127: cmTC_3507d/fast] Error 2
+
+
+Source file was:
+#include <pthread.h>
+
+static void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/suson/Projects/3D Chair/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_e7a8f/fast && /usr/bin/make  -f CMakeFiles/cmTC_e7a8f.dir/build.make CMakeFiles/cmTC_e7a8f.dir/build
+make[1]: Entering directory '/home/suson/Projects/3D Chair/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_e7a8f.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create -o CMakeFiles/cmTC_e7a8f.dir/CheckFunctionExists.c.o -c /usr/share/cmake-3.21/Modules/CheckFunctionExists.c
+Linking C executable cmTC_e7a8f
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e7a8f.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create -rdynamic CMakeFiles/cmTC_e7a8f.dir/CheckFunctionExists.c.o -o cmTC_e7a8f  -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_e7a8f.dir/build.make:99: cmTC_e7a8f] Error 1
+make[1]: Leaving directory '/home/suson/Projects/3D Chair/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:127: cmTC_e7a8f/fast] Error 2
+
+
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/suson/Projects/3D Chair/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_e5b65/fast && /usr/bin/make  -f CMakeFiles/cmTC_e5b65.dir/build.make CMakeFiles/cmTC_e5b65.dir/build
+make[1]: Entering directory '/home/suson/Projects/3D Chair/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_e5b65.dir/src.c.o
+/usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_e5b65.dir/src.c.o -c "/home/suson/Projects/3D Chair/build/CMakeFiles/CMakeTmp/src.c"
+Linking C executable cmTC_e5b65
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e5b65.dir/link.txt --verbose=1
+/usr/bin/cc -rdynamic CMakeFiles/cmTC_e5b65.dir/src.c.o -o cmTC_e5b65 
+/usr/bin/ld: CMakeFiles/cmTC_e5b65.dir/src.c.o: in function `main':
+src.c:(.text+0x3e): undefined reference to `pthread_create'
+/usr/bin/ld: src.c:(.text+0x4a): undefined reference to `pthread_detach'
+/usr/bin/ld: src.c:(.text+0x56): undefined reference to `pthread_cancel'
+/usr/bin/ld: src.c:(.text+0x67): undefined reference to `pthread_join'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_e5b65.dir/build.make:99: cmTC_e5b65] Error 1
+make[1]: Leaving directory '/home/suson/Projects/3D Chair/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:127: cmTC_e5b65/fast] Error 2
+
+
+Source file was:
+#include <pthread.h>
+
+static void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/suson/Projects/3D Chair/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_53156/fast && /usr/bin/make  -f CMakeFiles/cmTC_53156.dir/build.make CMakeFiles/cmTC_53156.dir/build
+make[1]: Entering directory '/home/suson/Projects/3D Chair/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_53156.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create -o CMakeFiles/cmTC_53156.dir/CheckFunctionExists.c.o -c /usr/share/cmake-3.21/Modules/CheckFunctionExists.c
+Linking C executable cmTC_53156
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_53156.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create -rdynamic CMakeFiles/cmTC_53156.dir/CheckFunctionExists.c.o -o cmTC_53156  -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_53156.dir/build.make:99: cmTC_53156] Error 1
+make[1]: Leaving directory '/home/suson/Projects/3D Chair/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:127: cmTC_53156/fast] Error 2
+
+
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/suson/Projects/3D Chair/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_b778a/fast && /usr/bin/make  -f CMakeFiles/cmTC_b778a.dir/build.make CMakeFiles/cmTC_b778a.dir/build
+make[1]: Entering directory '/home/suson/Projects/3D Chair/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_b778a.dir/src.c.o
+/usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_b778a.dir/src.c.o -c "/home/suson/Projects/3D Chair/build/CMakeFiles/CMakeTmp/src.c"
+Linking C executable cmTC_b778a
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b778a.dir/link.txt --verbose=1
+/usr/bin/cc -rdynamic CMakeFiles/cmTC_b778a.dir/src.c.o -o cmTC_b778a 
+/usr/bin/ld: CMakeFiles/cmTC_b778a.dir/src.c.o: in function `main':
+src.c:(.text+0x3e): undefined reference to `pthread_create'
+/usr/bin/ld: src.c:(.text+0x4a): undefined reference to `pthread_detach'
+/usr/bin/ld: src.c:(.text+0x56): undefined reference to `pthread_cancel'
+/usr/bin/ld: src.c:(.text+0x67): undefined reference to `pthread_join'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_b778a.dir/build.make:99: cmTC_b778a] Error 1
+make[1]: Leaving directory '/home/suson/Projects/3D Chair/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:127: cmTC_b778a/fast] Error 2
+
+
+Source file was:
+#include <pthread.h>
+
+static void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/suson/Projects/3D Chair/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_48793/fast && /usr/bin/make  -f CMakeFiles/cmTC_48793.dir/build.make CMakeFiles/cmTC_48793.dir/build
+make[1]: Entering directory '/home/suson/Projects/3D Chair/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_48793.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create -o CMakeFiles/cmTC_48793.dir/CheckFunctionExists.c.o -c /usr/share/cmake-3.21/Modules/CheckFunctionExists.c
+Linking C executable cmTC_48793
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_48793.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create -rdynamic CMakeFiles/cmTC_48793.dir/CheckFunctionExists.c.o -o cmTC_48793  -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_48793.dir/build.make:99: cmTC_48793] Error 1
+make[1]: Leaving directory '/home/suson/Projects/3D Chair/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:127: cmTC_48793/fast] Error 2
+
+
+

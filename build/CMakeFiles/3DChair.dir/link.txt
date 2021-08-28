@@ -1,0 +1,1 @@
+/usr/bin/c++ -rdynamic CMakeFiles/3DChair.dir/src/main.cpp.o -o 3DChair  lib/glfw/src/libglfw3.a libglad.a -ldl -lrt -lm -ldl -lX11 -lpthread -lXrandr -lXinerama -lXxf86vm -lXcursor 
