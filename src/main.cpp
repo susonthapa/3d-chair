@@ -29,7 +29,7 @@ const unsigned int SCR_HEIGHT = 600;
 float rotX=0.0f,rotY=1.0f,rotZ=0.0f;
 
 //Zoom Coordinates
-float zoomZ=-3.0f,zoomX=0.0f;
+float transZ=-3.0f,transX=0.0f;
 
 //Ambient Light Strength
 float ambStrength=0.3f;
@@ -558,7 +558,7 @@ int main()
 
         //Rotation Matrix Generation
         model=glm::rotate(model,(float)glfwGetTime(),glm::vec3(rotX,rotY,rotZ));
-        view=glm::translate(view,glm::vec3(zoomX,0.0f,zoomZ));
+        view=glm::translate(view,glm::vec3(transX,0.0f,transZ));
         projection=glm::perspective(glm::radians(45.0f),(float)SCR_WIDTH/(float)SCR_HEIGHT,0.1f,100.0f);
 
         //Load the matrices to vertex shader
@@ -615,20 +615,20 @@ void processInput(GLFWwindow *window,int key,int scancode,int action,int mods)
             }
             break;
         case GLFW_KEY_W:
-            if(zoomZ>-4)
-                zoomZ-=0.05;
+            if(transZ>-4)
+                transZ-=0.05;
             break;
         case GLFW_KEY_S:
-            if(zoomZ<0.5)
-                zoomZ+=0.05;
+            if(transZ<0.5)
+                transZ+=0.05;
             break;
         case GLFW_KEY_A:
-            if(zoomX>-1.25)
-                zoomX-=0.05;
+            if(transX>-1.25)
+                transX-=0.05;
             break;
         case GLFW_KEY_D:
-            if(zoomX<1.25)
-                zoomX+=0.05;
+            if(transX<1.25)
+                transX+=0.05;
             break;
         case GLFW_KEY_KP_ADD:
             if(ambStrength<1)
