@@ -433,10 +433,10 @@ int main()
     //Vertex Array Object Handle
     unsigned int VAO;
 
-    //Total No of Cubes in Chair =6;
+    //Total No of Cubes in Chair=20;
     int cubeCount=20;
 
-    //Buffer for each Cube =3
+    //Buffer for each Cube=3
     int bufferCount=3;
 
     //Texture for each Cube=1
@@ -449,72 +449,53 @@ int main()
     Cube cube[cubeCount];
 
     //Setup legs and other surfaces of chair
-
     //Back Support Left Pillar Note another pillar to the last
     cube[0].cubeSetup(-0.3f,0.175f,-0.1f,0.1f,0.05f,0.7f);
-
     //Seat
     cube[1].cubeSetup(-0.3f,0.1f,-0.1f,0.6f,0.7f,0.075f);
 
     //Leg 1
     cube[2].cubeSetup(-0.3f,-0.5f,0.52f,0.08f,0.08f,0.6f);
-
     //Leg 2
     cube[3].cubeSetup(0.22f,-0.5f,0.52f,0.08f,0.08f,0.6f);
-
     //Leg 3
     cube[4].cubeSetup(-0.3f,-0.5f,-0.1f,0.08f,0.08f,0.6f);
-
     //Leg 4
     cube[5].cubeSetup(0.22f,-0.5f,-0.1f,0.08f,0.08f,0.6f);
 
     //Left Side Support
     cube[6].cubeSetup(-0.3f,0.375f,-0.05f,0.075f,0.65f,0.075f);
-
     //Left Side Support Vertical
     cube[7].cubeSetup(-0.3f,0.175f,0.525f,0.075f,0.075f,0.2f);
-
     //Right Side Support
     cube[8].cubeSetup(0.225f,0.375f,-0.05f,0.075f,0.65f,0.075f);
-
     //Right Side Support Vertical
     cube[9].cubeSetup(0.225f,0.175f,0.525f,0.075f,0.075f,0.2f);
-
+    
     //Left Leg Support
     cube[10].cubeSetup(-0.3f,-0.4f,-0.02f,0.05f,0.54f,0.05f);
-
     //Right Leg Support
     cube[11].cubeSetup(0.25f,-0.4f,-0.02f,0.05f,0.54f,0.05f);
-
     //Back Leg Support
     cube[12].cubeSetup(-0.22f,-0.1f,-0.1f,0.44f,0.05f,0.05f);
-
     //Front Leg Support
     cube[13].cubeSetup(-0.22f,-0.1f,0.55f,0.44f,0.05f,0.05f);
 
     //Continue Pillar Construction
     //Right Support Pillar
     cube[14].cubeSetup(0.2f,0.175f,-0.1f,0.1f,0.05f,0.7f);
-
     //Support Pillar Horizontal Close
     cube[15].cubeSetup(-0.3f,0.875f,-0.1f,0.6f,0.05f,0.1f);
 
     //Back Support Horizontal Pillars
-
     //First Horizontal Pillar
     cube[16].cubeSetup(-0.2f,0.29f,-0.1f,0.4f,0.05f,0.08f);
-
     //Second Horizontal Pillar
     cube[17].cubeSetup(-0.2f,0.42f,-0.1f,0.4f,0.05f,0.08f);
-
     //Third Horizontal Pillar
     cube[18].cubeSetup(-0.2f,0.55f,-0.1f,0.4f,0.05f,0.08f);
-
     //Fourth Horizontal Pillar
     cube[19].cubeSetup(-0.2f,0.68f,-0.1f,0.4f,0.05f,0.08f);
-
-
-
 
     //Enable Depth Test for visible Surface Detection
     glEnable(GL_DEPTH_TEST);
@@ -533,7 +514,7 @@ int main()
 
     //Check if Our Texture is Loaded
     if(data) {
-        cout<<"Data Load Successfully"<<endl;
+        cout<<"Texture Load Successfully"<<endl;
         //Link the texture with minmaps
         glTexImage2D(GL_TEXTURE_2D,0,GL_RGB,width,height,0,GL_RGB,GL_UNSIGNED_BYTE,data);
         glGenerateMipmap(GL_TEXTURE_2D);

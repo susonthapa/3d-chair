@@ -7,6 +7,7 @@ in vec3 fragmentPosition;
 
 in vec2 ourTexture;
 
+//Ambient Light Reflection coefficient
 uniform float ambLightStrength;
 
 uniform sampler2D texture1;
@@ -14,8 +15,6 @@ uniform sampler2D texture1;
 
 void main()
 {
-    //Ambient Light Reflection coefficient
-
     //Specular Light Reflection Coefficient
     float specularStrength=0.3;
 
